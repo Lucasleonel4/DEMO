@@ -1,0 +1,88 @@
+:root
+{
+    --azulppal: #070D2B; /* 232D4F */
+    --grisppal:  #272723;
+    --verdeppal: #2E7D33;
+    font-family: "Raleway", sans-serif;
+}
+
+.gridcontainerstrc
+{
+    display:grid;
+    grid-template-columns: 440px 1fr;
+    grid-template-rows: 100px 650px 100vh 350px 350px;
+    grid-template-areas:"header header"
+                        "left carrousel"
+                        "main main"
+                        "sucur sucur"
+                        "footer footer";
+    grid-gap: 10px; /* IGUAL RESULTADO CON gap: 10px; */
+    height: 100vh;
+
+}
+
+body{
+    background-color: grey;
+}
+
+.header  /* Se puede borrar, ya que se dispuso en la hoja css específica para el header */
+{
+    background-color: var(--azulppal);
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    /* flex-grow: 1; → No sirve para nada*/
+    font-family: "Montserrat", sans-serif;
+    /* border-radius: 10px; → Aplicar luego y dar el color azul marino especifico*/
+    /* o bien darle a la parte del logo y barra de busqueda el color azul y colo gris para el nav */
+}
+
+
+.main
+{
+    grid-area: main;
+    background-color: var(--azulppal);
+}
+
+.carrus-right
+{
+    grid-area: carrousel;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--grisppal);
+}
+
+.aside /* Alguna oferta especial a la izquieda, a derecha carrucel de bootstrap con imagenes generales abajo main*/
+{   
+    grid-area: left;
+    background-color: var(--grisppal);
+}
+
+.footer
+{
+    grid-area: footer;
+    background-color: var(--azulppal);
+}
+
+.item{
+/*     background-color: var(--azulppal); */
+    /* padding: 10px; */
+    border-radius: 10px;
+    color: white;
+} 
+
+.carrusel-div
+{
+    height: 95%;
+    width: 95%;
+    text-align: center;
+}
+
+.carrusel-div video
+{
+    height: 100%;
+    border-radius: 10px;
+}
+
