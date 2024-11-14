@@ -67,7 +67,6 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: red solid 1px;
 }
 
 .formul h2
@@ -113,10 +112,4 @@ body{
 {
     grid-area: info;
     background-color: gray
-}
-
-
-.formul
-{
-    border: solid 1px red;
 }
